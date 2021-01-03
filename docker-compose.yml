@@ -4,9 +4,9 @@ services:
   app:
     container_name: storybook-workshop-1
     image: node:latest
-    command: sh -c "yarn install"
+    command: sh -c "yarn install && yarn serve"
     ports:
-      - 3000:8080
+      - 8080:8080
     working_dir: /app
     volumes:
       - ./:/app
